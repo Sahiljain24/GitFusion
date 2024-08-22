@@ -43,11 +43,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/explore", exploreRoutes);
 console.log(__dirname)
 // Serve static files from the frontend build
-app.use(express.static(path.join(__dirname, "/frontend")));
+// app.use(express.static(path.join(__dirname, "/frontend")));
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "frontend",  "index.html"));
-});
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "frontend",  "index.html"));
+// });
 // Start the server and connect to MongoDB
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
